@@ -1,0 +1,39 @@
+droooones wooo yeahhh baby
+
+
+
+
+      # Python code
+      import codrone_edu
+      import codrone_edu.drone
+      from codrone_edu import *
+      print("main.py")
+      drone = codrone_edu.drone.Drone()
+
+      drone.open()
+      drone.takeoff()
+      drone.hover(2.5)
+      drone.set_waypoint()  # 0
+      drone.set_drone_LED(255, 255, 255, 255)
+      drone.hover(1)
+      drone.set_drone_LED(0, 255, 0, 255)
+      drone.move_forward(1, "m", 100)
+      drone.hover(2.5)
+      drone.set_waypoint()  # 1
+      drone.set_drone_LED(255, 0, 0, 255)
+      drone.hover(3)
+      drone.set_drone_LED(255, 255, 255, 255)
+      drone.goto_waypoint(drone.waypoint_data[0], 0.5)
+      drone.set_drone_LED(0, 255, 0, 255)
+      drone.hover(3)
+      drone.set_drone_LED(255, 255, 255, 255)
+      drone.goto_waypoint(drone.waypoint_data[1], 0.5)
+      drone.move_left(1, "m", 100)
+      drone.hover(3)
+      drone.set_drone_LED(255, 0, 0, 255)
+      drone.goto_waypoint(drone.waypoint_data[0], 0.5)
+      drone.hover(3)
+      drone.set_drone_LED(255, 255, 255, 255)
+      drone.land()
+      drone.close()
+      
